@@ -59,13 +59,13 @@ public class adminServiceimpl implements adminService {
     }
 
     @Override
-    public int loginValidation(String username, String password) {
+    public int loginValidation(Integer cin ,String mail, String password) {
         try {
             PreparedStatement statement= connection
-                    .prepareStatement("select * from admin where username='"+username+"'");
+                    .prepareStatement("select * from admin where cin='"+cin+"'");
             ResultSet rs = statement.executeQuery();
             while(rs.next()){
-                if(rs.getString(1).equals(username) && rs.getString(3).equals(password)){
+                if(rs.getString(2).equals(mail) && rs.getString(3).equals(password)){
                     flag=1;
                 }else{
                     System.out.println("Invalid username or password");

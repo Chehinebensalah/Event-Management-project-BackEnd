@@ -60,10 +60,10 @@ public class adminController {
 
 
     //login later
-    @GetMapping("admin/{username2}/{password2}")
+    @GetMapping("admin/{cin2}/{mail2}/{password2}")
     //@CrossOrigin(origins = "http://localhost:4200/")
-    public int adminlogin(@PathVariable("username2") String username1,@PathVariable("password2") String password1){
-        int flag= adminservice.loginValidation(username1, password1);
+    public int adminlogin(@PathVariable("cin2") Integer cin1,@PathVariable("mail2") String mail1,@PathVariable("password2") String password1){
+        int flag= adminservice.loginValidation(cin1,mail1, password1);
         if(flag==0){
             return  0;
         }

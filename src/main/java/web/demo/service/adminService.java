@@ -17,5 +17,5 @@ public interface adminService {
     public void deleteAdmin(Integer id);
 
     public admin updateAdmin(admin a , Integer id);
-    public int loginValidation(String username,String password);
+    public int loginValidation(Integer cin,String username,String password);
 }
