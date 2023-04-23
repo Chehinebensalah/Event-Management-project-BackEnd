@@ -1,0 +1,12 @@
+package web.demo.repo;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import web.demo.model.*;
+
+@Repository
+public interface adminRepository extends CrudRepository<admin,Integer> {
+
+}
