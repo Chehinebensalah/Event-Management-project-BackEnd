@@ -49,6 +49,7 @@ public class eventServiceimpl implements eventService {
         Event.setDate_debut(ev.getDate_debut());
         Event.setDate_fin(ev.getDate_fin());
         Event.setByadmin(ev.getByadmin());
+        Event.setDescription(ev.getDescription());
         return eventrrepository.save(Event);
     }
 }

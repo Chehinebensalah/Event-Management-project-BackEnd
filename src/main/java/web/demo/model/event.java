@@ -18,9 +18,11 @@ public class event {
     String categorie;
     Date date_debut;
     Date date_fin;
+
+    String description;
     Integer Byadmin;
 
-    public event(Integer id_event, String name, String image_path, String categorie, Date date_debut, Date date_fin, Integer byadmin) {
+    public event(Integer id_event, String name, String image_path, String categorie, Date date_debut, Date date_fin,String description, Integer byadmin) {
         this.id_event = id_event;
         this.name = name;
         this.image_path = image_path;
@@ -28,6 +30,15 @@ public class event {
         this.date_debut = date_debut;
         this.date_fin = date_fin;
         this.Byadmin = byadmin;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public event(){
