@@ -13,6 +13,8 @@ public interface eventService {
     public List<event> getEvents();
 
     public event getEventbyId(Integer id);
+
+    public List<event> eventsbyIdadmin(Integer id);
     public void deleteEvent(Integer id);
 
     public event updateEvent(event ev , Integer id);

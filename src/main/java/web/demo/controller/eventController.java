@@ -36,4 +36,10 @@ public class eventController {
     public event getEventbyid(@PathVariable("id") Integer id){
         return eventservice.getEventbyId(id);
     }
+
+    @GetMapping("/event/geteventbyidadmin/{id}")
+    public List<event> getEvenetsByIdAdmin(@PathVariable("id") Integer id){
+        return eventservice.eventsbyIdadmin(id);
+    }
+
 }

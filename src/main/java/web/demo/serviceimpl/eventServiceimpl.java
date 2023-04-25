@@ -29,6 +29,11 @@ public class eventServiceimpl implements eventService {
     public event getEventbyId(Integer id) {
         return eventrrepository.findById(id).get();
     }
+    @Override
+    public List<event> eventsbyIdadmin(Integer id){
+        return eventrrepository.getEventsbyAdminId(id);
+    }
+
 
     @Override
     public void deleteEvent(Integer id) {
